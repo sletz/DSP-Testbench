@@ -37,15 +37,12 @@ class FaustExample : public ProcessorHarness
     
     private:
         
-        ::dsp* fDSP;
+        std::unique_ptr<mydsp> fDSP;
         APIUI fUI;
         
     public:
         FaustExample ();
-        ~FaustExample ()
-        {
-            delete fDSP;
-        }
+        ~FaustExample () = default;
         
         void prepare (const juce::dsp::ProcessSpec& spec) override;
         void process (const juce::dsp::ProcessContextReplacing<float>& context) override;

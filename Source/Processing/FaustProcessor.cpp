@@ -13,7 +13,7 @@
 FaustExample::FaustExample()
 : ProcessorHarness (FAUST_ACTIVES)
 {
-    fDSP = new mydsp();
+    fDSP = std::make_unique<mydsp>();
     fDSP->buildUserInterface(&fUI);
 }
 void FaustExample::prepare (const juce::dsp::ProcessSpec& spec)
