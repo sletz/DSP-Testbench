@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT name="DSP Testbench" projectType="guiapp" reportAppUsage="0"
-              id="r6nItq" jucerFormatVersion="1" version="1.1.0" displaySplashScreen="1">
+              id="r6nItq" jucerFormatVersion="1" version="1.2.0" displaySplashScreen="1"
+              companyWebsite="faust.grame.fr" headerPath="/usr/local/include">
   <MAINGROUP id="u8eJT5" name="DSP Testbench">
     <GROUP id="{EC3F1D61-E8BE-E4B3-C8EE-882109CF98DE}" name="Resources">
       <FILE id="rHdhvD" name="about.svg" compile="0" resource="1" file="Resources/about.svg"/>
@@ -67,6 +68,10 @@
               file="Source/GUI/SourceComponent.h"/>
       </GROUP>
       <GROUP id="{1929A062-3E27-DDE2-B0FB-A0FF3E05992D}" name="Processing">
+        <FILE id="zjvK0c" name="FaustProcessor.cpp" compile="1" resource="0"
+              file="Source/Processing/FaustProcessor.cpp"/>
+        <FILE id="mV7oIs" name="FaustProcessor.h" compile="0" resource="0"
+              file="Source/Processing/FaustProcessor.h"/>
         <FILE id="aNz0q1" name="AudioDataTransfer.h" compile="0" resource="0"
               file="Source/Processing/AudioDataTransfer.h"/>
         <FILE id="Q3hti9" name="AudioScopeProcessor.h" compile="0" resource="0"

@@ -10,6 +10,7 @@
 		09225D91D6D8708775F71D46 /* SourceComponent.cpp */ = {isa = PBXBuildFile; fileRef = E1B58FA4A015906F93735652; };
 		09CCBA286C4D8D2266BAB6B0 /* MonitoringComponent.cpp */ = {isa = PBXBuildFile; fileRef = 6ECE5AC0EB8A8C56657F6259; };
 		0BE33930E16EB6A87A5C284D /* QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = 2317DFEBACE1AE8DB2D2A734; };
+		10A3663ED7D4318A4B18F266 /* FaustProcessor.cpp */ = {isa = PBXBuildFile; fileRef = EE39334FC15CEA25F1E804E5; };
 		1459F416236A2DA0ABA878D4 /* DiscRecording.framework */ = {isa = PBXBuildFile; fileRef = CA06C1089354EE648FB6DD37; };
 		166AA4EAB19F7DE821FAFBA6 /* include_juce_audio_processors_ara.cpp */ = {isa = PBXBuildFile; fileRef = 902C91541BFCBFD0266818F7; };
 		174E5977A7FD2E05AE6BFF55 /* include_juce_data_structures.mm */ = {isa = PBXBuildFile; fileRef = 7E638336E5A3BCD39F50EAA6; };
@@ -157,7 +158,9 @@
 		E9E1818E2493887CC15F6ACF /* MeteringComponents.cpp */ /* MeteringComponents.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeteringComponents.cpp; path = ../../Source/GUI/MeteringComponents.cpp; sourceTree = SOURCE_ROOT; };
 		EC5048634786F05B4E94D47A /* juce_audio_basics */ /* juce_audio_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_basics; path = ../../../modules/juce_audio_basics; sourceTree = SOURCE_ROOT; };
 		EE37E93158A394F0070B2700 /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		EE39334FC15CEA25F1E804E5 /* FaustProcessor.cpp */ /* FaustProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FaustProcessor.cpp; path = ../../Source/Processing/FaustProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		EEF8BD4D9BE8A0DA641CE59B /* MeteringProcessors.cpp */ /* MeteringProcessors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MeteringProcessors.cpp; path = ../../Source/Processing/MeteringProcessors.cpp; sourceTree = SOURCE_ROOT; };
+		FC2979B204650EBEBB5FB878 /* FaustProcessor.h */ /* FaustProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaustProcessor.h; path = ../../Source/Processing/FaustProcessor.h; sourceTree = SOURCE_ROOT; };
 		FCF8119DE3A8DC19A4C03EBD /* FastApproximations.h */ /* FastApproximations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FastApproximations.h; path = ../../Source/Processing/FastApproximations.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -223,6 +226,8 @@
 		4344371771A6C4DCD7996A34 /* Processing */ = {
 			isa = PBXGroup;
 			children = (
+				EE39334FC15CEA25F1E804E5,
+				FC2979B204650EBEBB5FB878,
 				2B334B1A20CE626103A71ABF,
 				4AC7C15560ACD6793C9C7948,
 				FCF8119DE3A8DC19A4C03EBD,
@@ -473,6 +478,7 @@
 				D57AE9C5CC6F2B6634C6F4E8,
 				8EB2784CA2CB58438DB9683F,
 				09225D91D6D8708775F71D46,
+				10A3663ED7D4318A4B18F266,
 				8063720465476AF8D293D0A9,
 				8E41C83277F35C16F52A100B,
 				ABC77E974A436C3FFBD1F6C9,
@@ -514,8 +520,8 @@
 					"_DEBUG=1",
 					"DEBUG=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.1.0",
-					"JUCE_APP_VERSION_HEX=0x10100",
+					"JUCE_APP_VERSION=1.2.0",
+					"JUCE_APP_VERSION_HEX=0x10200",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=0",
 					"JucePlugin_Build_AU=0",
@@ -529,13 +535,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../JuceLibraryCode",
 					"$(SRCROOT)/../../../modules",
+					"/usr/local/include",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-App.plist;
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../../modules";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../../modules /usr/local/include";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.DSPTestbench;
 				PRODUCT_NAME = "DSP Testbench";
 				USE_HEADERMAP = NO;
@@ -560,8 +567,8 @@
 					"_NDEBUG=1",
 					"NDEBUG=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.1.0",
-					"JUCE_APP_VERSION_HEX=0x10100",
+					"JUCE_APP_VERSION=1.2.0",
+					"JUCE_APP_VERSION_HEX=0x10200",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=0",
 					"JucePlugin_Build_AU=0",
@@ -575,6 +582,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../JuceLibraryCode",
 					"$(SRCROOT)/../../../modules",
+					"/usr/local/include",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Info-App.plist;
@@ -582,7 +590,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../../modules";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../../modules /usr/local/include";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.DSPTestbench;
 				PRODUCT_NAME = "DSP Testbench";
 				USE_HEADERMAP = NO;

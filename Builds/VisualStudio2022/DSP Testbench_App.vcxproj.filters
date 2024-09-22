@@ -679,6 +679,9 @@
     <ClCompile Include="..\..\Source\GUI\SourceComponent.cpp">
       <Filter>DSP Testbench\Source\GUI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Processing\FaustProcessor.cpp">
+      <Filter>DSP Testbench\Source\Processing</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Processing\MeteringProcessors.cpp">
       <Filter>DSP Testbench\Source\Processing</Filter>
     </ClCompile>
@@ -3341,6 +3344,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\GUI\SourceComponent.h">
       <Filter>DSP Testbench\Source\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Processing\FaustProcessor.h">
+      <Filter>DSP Testbench\Source\Processing</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Processing\AudioDataTransfer.h">
       <Filter>DSP Testbench\Source\Processing</Filter>
