@@ -22,12 +22,10 @@ void FaustExample::prepare (const juce::dsp::ProcessSpec& spec)
 }
 void FaustExample::process (const juce::dsp::ProcessContextReplacing<float>& context)
 {
-   
     // Update controllers
     for (int ctrl = 0; ctrl < fUI.getParamsCount(); ctrl++) {
         fUI.setParamRatio(ctrl, getControlValue(ctrl));
     }
-    
     
     FAUSTFLOAT* inputs[fDSP->getNumInputs()];
     for (int chan = 0; chan < fDSP->getNumInputs(); chan++) {
@@ -41,7 +39,6 @@ void FaustExample::process (const juce::dsp::ProcessContextReplacing<float>& con
     
     // Compute samples
     fDSP->compute(context.getOutputBlock().getNumSamples(), inputs, outputs);
-    
 }
 void FaustExample::reset()
 {

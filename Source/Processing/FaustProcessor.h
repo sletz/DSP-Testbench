@@ -26,12 +26,6 @@
 
 #include "mydsp.h"
 
-/*
-#ifndef FAUST_ACTIVES
-#define FAUST_ACTIVES 2
-#endif
-*/
-
 class FaustExample : public ProcessorHarness
 {
     
