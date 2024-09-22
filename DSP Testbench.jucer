@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT name="DSP Testbench" projectType="guiapp" reportAppUsage="0"
-              id="r6nItq" jucerFormatVersion="1" version="1.1.0">
+              id="r6nItq" jucerFormatVersion="1" version="1.1.0" displaySplashScreen="1">
   <MAINGROUP id="u8eJT5" name="DSP Testbench">
     <GROUP id="{EC3F1D61-E8BE-E4B3-C8EE-882109CF98DE}" name="Resources">
       <FILE id="rHdhvD" name="about.svg" compile="0" resource="1" file="Resources/about.svg"/>
@@ -101,19 +101,19 @@
         <CONFIGURATION isDebug="0" name="Release" macOSDeploymentTarget="10.13" osxCompatibility="10.13 SDK"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
-        <MODULEPATH id="juce_dsp" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../modules"/>
+        <MODULEPATH id="juce_events" path="../modules"/>
+        <MODULEPATH id="juce_graphics" path="../modules"/>
+        <MODULEPATH id="juce_data_structures" path="../modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../modules"/>
+        <MODULEPATH id="juce_opengl" path="../modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../modules"/>
+        <MODULEPATH id="juce_dsp" path="../modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <VS2022 targetFolder="Builds/VisualStudio2022">
