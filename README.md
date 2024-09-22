@@ -59,6 +59,13 @@ The snapshot functionality allows you to pass 4096 samples through the processor
 
 The benchmark functionality starts your processor(s) on another thread and pumps audio through, gathering statistics on how much time has been spent running your routines. A single block of audio is repeated from source A (using live audio input will not work).
 
+### Using Faust DSP
+
+A [Faust](https://faust.grame.fr) DSP can be compiled using:
+
+- `faust -uim foo.dsp -scn ::dsp -o mydsp.h`and the produced `mydsp.h` file simply replacing the one in DSP-Testbench/Source/Processing
+- then recompile
+
 ## Developer Notes
 
 To make use of DSP Testbench, you need to include your own code, wrap it appropriately and build the project.

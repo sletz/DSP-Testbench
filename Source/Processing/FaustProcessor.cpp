@@ -34,7 +34,7 @@ void FaustExample::process (const juce::dsp::ProcessContextReplacing<float>& con
     
     FAUSTFLOAT* outputs[fDSP->getNumOutputs()];
     for (int chan = 0; chan < fDSP->getNumOutputs(); chan++) {
-        outputs[chan] =  context.getOutputBlock().getChannelPointer(chan);
+        outputs[chan] = context.getOutputBlock().getChannelPointer(chan);
     }
     
     // Compute samples
